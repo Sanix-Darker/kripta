@@ -2,7 +2,7 @@
 
 # KR1PT4
 
-An Encryption module to encrypt communications between clients (Asymmetric and Symmetric encryptions handled).
+A CrossLanguage Encryption Module to encrypt information/data/files (Asymmetric and Symmetric encryptions handled).
 
 ## Introduction
 
@@ -36,7 +36,7 @@ All examples of implementations are done in each versions, for more details cont
 
 ## TODO
 
-- Create public package for each implementation (npm, PiPy, etc...)
+- Create public package for each implementation (npm, PyPi, etc...)
 
 ## Author
 
