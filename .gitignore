@@ -1,0 +1,11 @@
+.vscode
+data/*.db
+__pycache__
+.history
+*node_modules
+/Asymmetric/java/KriptaRSA/nbproject/private/
+/Asymmetric/java/KriptaRSA/build/
+/Asymmetric/java/KriptaRSA/dist/
+/Symmetric/java/KriptaAES/nbproject/private/
+/Symmetric/java/KriptaAES/build/
+/Symmetric/java/KriptaAES/dist/
