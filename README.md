@@ -1,4 +1,4 @@
-![logo](./images/logo.png)
+<img src="./images/logo.jpg" width="350" />
 
 # KR1PT4
 
