@@ -112,4 +112,4 @@ This java project is a NetBeans project, so just open it and Run:
 
 ## Author
 
-- Sanix darker (Ange SAA DJIO)
+- Sanix darker  

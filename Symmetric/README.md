@@ -19,4 +19,4 @@ NB: To get more information, contact the author.
 
 ## Author
 
-- Sanix-darker(Ange SAA DJIO)
+- Sanix-darker 

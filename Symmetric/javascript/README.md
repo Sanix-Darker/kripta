@@ -86,4 +86,4 @@ yarn start
 
 ## Author
 
-- Sanix darker (Ange SAA DJIO)
+- Sanix darker  
