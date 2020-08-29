@@ -74,4 +74,4 @@ python example.py
 
 ## Author
 
-- Sanix darker  
+- Sanix darker

@@ -171,7 +171,9 @@ class KriptaAES(object):
 
             with open(new_path, 'wb') as f:
                 chunks = self._file_chunks(
-                    path, self._salt_len + self._iv_len, self._mac_len
+                    path, 
+                    self._salt_len + self._iv_len, 
+                    self._mac_len
                 )
                 for chunk, is_last in chunks:
                     data = cipher.decrypt(chunk)
@@ -230,12 +232,16 @@ class KriptaAES(object):
         '''
         if password is not None:
             dkey = PBKDF2(
-                password, salt, self._key_len + self._mac_key_len, 
-                self.key_iterations, hmac_hash_module = SHA512
+                password, 
+                salt, 
+                self._key_len + self._mac_key_len, 
+                self.key_iterations, 
+                hmac_hash_module = SHA512
             )
         elif self._master_key is not None:
             dkey = HKDF(
-                self._master_key, self._key_len + self._mac_key_len, 
+                self._master_key, 
+                self._key_len + self._mac_key_len, 
                 salt, SHA256
             )
         else:

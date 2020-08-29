@@ -1,3 +1,6 @@
+# Example for AES Symmetric encryption
+# Using KriptaAES-JS
+
 from KriptaAES import KriptaAES
 
 k = KriptaAES()

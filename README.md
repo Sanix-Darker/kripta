@@ -2,7 +2,7 @@
 
 # KR1PT4
 
-A CrossLanguage Encryption Module to encrypt information/data/files (Asymmetric and Symmetric encryptions handled).
+A CrossLanguage Encryption/Decryption Module for your datas/files (Asymmetric and Symmetric encryptions).
 
 ## Introduction
 
