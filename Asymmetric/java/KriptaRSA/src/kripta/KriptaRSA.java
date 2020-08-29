@@ -176,4 +176,3 @@ public class KriptaRSA {
         return clearText;
     }
 }
-

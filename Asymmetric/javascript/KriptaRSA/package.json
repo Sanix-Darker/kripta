@@ -47,6 +47,7 @@
     ]
   },
   "dependencies": {
+    "keypair": "^1.0.1",
     "node-forge": "0.9.1"
   }
 }

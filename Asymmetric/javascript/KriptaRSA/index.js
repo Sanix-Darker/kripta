@@ -1,4 +1,6 @@
 import forge from 'node-forge';
+import keypair from 'keypair';
+
 
 class KriptaRSA {
 
@@ -34,10 +36,15 @@ class KriptaRSA {
     }
 
     generateRSAKeyPair() {
-        let rsa = forge.pki.rsa;
-        let keypair = rsa.generateKeyPair({bits: this.keysize, e: 0x10001, workers: -1});
-        return keypair;
+        return keypair();
     }
+
+    autoSet() {
+        const keyPair = this.generateRSAKeyPair();
+        this.setPrivateKey(keyPair.private);
+        this.setPublicKey(keyPair.public);
+    }
+
     // To convert Public key to string
     getPubKeyPem(keypair) {
         return forge.pki.publicKeyToPem(keypair.publicKey);

@@ -18,6 +18,7 @@ This is how it's work in the code:
 ```java
 package kripta;
 public class Example {
+
     public static void main(String args[]) throws Exception {
 
         // Instantiate the KriptaRSA
@@ -65,6 +66,7 @@ public class Example {
         System.out.println("Decrypted-Message : "+ k.decrypt(encrypted_msg));
         System.out.println("-----------------------------------------------------");
     }
+    
 }
 ```
 

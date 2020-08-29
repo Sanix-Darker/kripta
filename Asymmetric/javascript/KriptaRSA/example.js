@@ -1,9 +1,30 @@
 import KriptaRSA from '.'
+import keypair from 'keypair'
+
+
+console.log("\nWELCOME TO KRIPTA-RSA-JAVASCRIPT")
+
+const verbose = (k, message) => {
+    console.log("-----------------------------------------------------")
+    console.log("Message : ", message)
+    console.log("-----------------------------------------------------")
+    console.log("PublicKey : ", k.getPublicKey())
+    console.log("-----------------------------------------------------")
+    console.log("PrivateKey : ", k.getPrivateKey())
+    console.log("-----------------------------------------------------")
+    
+    const encrypted_msg = k.encrypt(k.getPublicKey(), message)
+    console.log("Encrypted-Message : ", encrypted_msg)
+    console.log("-----------------------------------------------------")
+    console.log("Decrypted-Message : ", k.decrypt(encrypted_msg))
+    console.log("-----------------------------------------------------")
+}
+
+///////////////////////////////////////////////////////////////
+/////// MANUAL-MODE (You can provide your own KeyPairs) ///////
+///////////////////////////////////////////////////////////////
 
 let k = new KriptaRSA()
-
-// You can generate KeyPairs here:
-// console.log(k.generate_RSA())
 
 // You can set/get PublicKey or Private key :
 k.setPublicKey('-----BEGIN PUBLIC KEY-----\n'+
@@ -29,17 +50,21 @@ k.setPrivateKey('-----BEGIN RSA PRIVATE KEY-----\n'+
 'ELBTlo8/pPOqTVTgJ2XNCsXrZDtkM2j0e8MiFhXhDZ0=\n'+
 '-----END RSA PRIVATE KEY-----')
 
-console.log("\nWELCOME TO KRIPTA-RSA-JAVASCRIPT")
-const message = "Mon message Secret"
-console.log("-----------------------------------------------------")
-console.log("Message : ", message)
-console.log("-----------------------------------------------------")
-console.log("PublicKey : ", k.getPublicKey())
-console.log("-----------------------------------------------------")
-console.log("PrivateKey : ", k.getPrivateKey())
-console.log("-----------------------------------------------------")
-const encrypted_msg = k.encrypt(k.getPublicKey(), message)
-console.log("Encrypted-Message : ", encrypted_msg)
-console.log("-----------------------------------------------------")
-console.log("Decrypted-Message : ", k.decrypt(encrypted_msg))
-console.log("-----------------------------------------------------")
+const message = "My secret messae !!!";
+// We print all working process
+verbose(k, message);
+
+
+console.log("\n///////////////////////////////////////////////////////////////////////////////////\n")
+
+///////////////////////////////////////////////////////////////////////////////////////
+/////// OR USE THE AUTOSET-MODE(You don't have to provide manually pub/pri) ///////////
+///////////////////////////////////////////////////////////////////////////////////////
+
+let k2 = new KriptaRSA();
+
+k2.autoSet();
+const message2 = "Another secret message !";
+
+// We print all working process
+verbose(k2, message2);
