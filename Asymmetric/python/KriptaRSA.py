@@ -14,26 +14,27 @@ class KriptaRSA:
         self.private_key = b""
 
     def toBytes(self, m):
-        if type(m) == str:
-            return m.encode()
-        else:
-            return m
+        return m.encode() if type(m) == str else m
+
 
     # Setters and getters
     def getKeySize(self):
         return self.keysize
+
     def setKeySize(self, m):
         self.keysize = m
 
     # Setters and getters
     def getPublicKey(self):
         return self.public_key
+
     def setPublicKey(self, m):
         self.public_key = self.toBytes(m)
 
     # Setters and getters
     def getPrivateKey(self):
         return self.private_key
+
     def setPrivateKey(self, m):
         self.private_key = self.toBytes(m)
 
@@ -42,7 +43,6 @@ class KriptaRSA:
         self.setPublicKey(new_key.publickey().exportKey("PEM"))
         self.setPrivateKey(new_key.exportKey("PEM"))
         return self.getPrivateKey(), self.getPublicKey()
-
 
     def encrypt(self, key, plaintext):
         # Assuming that the public key is coming from java or javascript,
