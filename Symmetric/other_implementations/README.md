@@ -1,6 +1,6 @@
 # OTHERS IMPLEMENTATIONS
 
-Not really in the Stack of Variance but in cas we will want to use it...
+Just some BONUS !
 
 ## Implementations
 
